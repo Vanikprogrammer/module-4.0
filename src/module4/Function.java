@@ -36,7 +36,6 @@ public class Function {
         }
     }
     public static void getMax(float a, float b){
-        System.out.println("Enter two numbers: ");
         if(a > b){
             System.out.println(a);
         }else {
@@ -59,7 +58,6 @@ public class Function {
         }
 }
     private static void recDraw(int weight, int height){
-        System.out.println("Enter two numbers: ");
         if(height > 0){
             recDraw(weight);
             System.out.println();
@@ -84,7 +82,9 @@ public class Function {
         System.out.println("Enter the task number: ");
         int task = sc.nextInt();
         int argument;
-        float argument1;
+        int argument1;
+        float argument2;
+        float argument3;
             switch (task) {
                 case 1:
                     System.out.println("Task № 1. Enter number: ");
@@ -94,7 +94,8 @@ public class Function {
                 case 2:
                     System.out.println("Task № 2. Enter two numbers: " );
                     argument = sc.nextInt();
-                    drawRectangle(argument,argument);
+                    argument1 = sc.nextInt();
+                    drawRectangle(argument,argument1);
                     break;
                 case 3:
                     System.out.println("Task № 3. Enter number: ");
@@ -104,12 +105,14 @@ public class Function {
                 case 4:
                     System.out.println("Task № 4. Enter two numbers: ");
                     argument = sc.nextInt();
-                    getMax(argument,argument);
+                    argument1 = sc.nextInt();
+                    getMax(argument,argument1);
                     break;
                 case 5:
-                    System.out.println("Task № 4. Enter two fractional numbers: ");
-                    argument1 = sc.nextFloat();
-                    getMax(argument1,argument1);
+                    System.out.println("Task № 5. Enter two fractional numbers: ");
+                    argument2 = sc.nextFloat();
+                    argument3 = sc.nextFloat();
+                    getMax(argument2,argument3);
                     break;
                 case 6:
                     System.out.println("Task № 6. Enter number: ");
@@ -117,9 +120,10 @@ public class Function {
                     recSum(argument);
                     break;
                 case 7:
-                    System.out.println("Task № 6. Enter two numbers: ");
+                    System.out.println("Task № 7. Enter two numbers: ");
                     argument = sc.nextInt();
-                    recDraw(argument,argument);
+                    argument1 = sc.nextInt();
+                    recDraw(argument,argument1);
                 default:
                     System.out.println("You entered an invalid task number. Do you want to continue?: Y/N");
 
